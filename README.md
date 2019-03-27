@@ -36,7 +36,10 @@ Some resources related to the tools you will be using:
 borders of the USGS DEM quadrangles. 
 
 3. Click on the 
-![draw_rectangle_box.png](draw_rectangle_box.png) `Draw Rectangle` box icon. Draw a rectangle around the Tucson foothills region, making sure to include Mount Lemmon in the upper right and extending far enough on the left to cross I-10. The footprint should look like this: 
+
+![draw_rectangle_box.png](screenshots/draw_rectangle_box.png) `Draw Rectangle` 
+
+box icon. Draw a rectangle around the Tucson foothills region, making sure to include Mount Lemmon in the upper right and extending far enough on the left to cross I-10. The footprint should look like this: 
 
 ![tucson_foothills_polygon.png](screenshots/tucson_foothills_polygon.png)
 
@@ -60,7 +63,7 @@ If you click on the `Thumbnail` link on each entry under the `Actions` column yo
 #### Clip Elevation Data
 1. Use the `study_area.shp` polygon to clip the DEM. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
 
-![dem_clip.png](dem_clip.png)
+![dem_clip.png](screenshots/dem_clip.png)
 
 #### "Massage" DEM for hydrology
 The source DEMs have little divots in it; partly because that's how the landscape is and partly because of artifacts. For
