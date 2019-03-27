@@ -26,6 +26,7 @@ Some resources related to the tools you will be using:
 - https://sagatutorials.wordpress.com/basic-terrain-analysis/
 - https://gracilis.carleton.ca/CUOSGwiki/index.php/Exploring_Hydrological_Analyses_using_SAGA_GIS
 - https://geogeek.xyz/catchment-delineation-with-qgis.html
+- https://gisgeography.com/flow-direction/
 
 ### Instructions
 #### Acquire Elevation Data
