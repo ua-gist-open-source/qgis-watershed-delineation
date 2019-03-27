@@ -27,6 +27,7 @@ Some resources related to the tools you will be using:
 - https://gracilis.carleton.ca/CUOSGwiki/index.php/Exploring_Hydrological_Analyses_using_SAGA_GIS
 - https://geogeek.xyz/catchment-delineation-with-qgis.html
 - https://gisgeography.com/flow-direction/
+- https://pvanb.wordpress.com/2010/03/15/esri-rasters-in-grass-or-qgis/
 
 ### Instructions
 #### Acquire Elevation Data
@@ -53,6 +54,9 @@ If you click on the `Thumbnail` link on each entry under the `Actions` column yo
 ![usgs_map_dem_quads.png](screenshots/usgs_map_dem_quads.png)
 
 5. Download the data, which will be a .zip file containing an ArcGrid and subdirectory containing a polygon shapefile of the extent. Extract the zip files and load the grids in QGIS.
+
+The easiest way to load them is to Drag them from your file explorer and drop them on the QGIS Layer List. You can
+also load them through the QGIS drop-down: `Layer`-> `Add Layer` -> `Raster` and select `File` and navigate to the `grd33w*\info` directories and select the `w001001.adf` files for both the grids. (further reading: https://pvanb.wordpress.com/2010/03/15/esri-rasters-in-grass-or-qgis/) 
 
 #### Mosaic Elevation Data 
 1. Add both DEM grids to the QGIS project. The grids will have an obvious seam where they touch/overlap because the histogram stretch applied to the layers is based on the stats of each layer and each DEM has different stats. You'll see it disappear when you mosaic them.
