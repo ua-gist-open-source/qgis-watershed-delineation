@@ -66,7 +66,7 @@ also load them through the QGIS drop-down: `Layer`-> `Add Layer` -> `Raster` and
 3. Click the `...` at the right side of the `Input layers` selection and check the two grids you just downloaded. Run the tool and the mosaic will be added to your map.
 
 #### Clip Elevation Data
-1. Use the `study_area.shp` polygon to clip the DEM. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
+1. Use the `data/study_area.geojson` polygon to clip the DEM. This file is in this repo. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
 
 ![dem_clip.png](screenshots/dem_clip.png)
 
