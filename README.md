@@ -69,7 +69,8 @@ If you click on the `Thumbnail` link on each entry under the `Actions` column yo
 The source DEMs have little divots in it; partly because that's how the landscape is and partly because of artifacts. For
 example, the DEMs have elevations for roads and roads may cross over washes (e.g., with a bridge), meaning the upslope 
 side of the bridge represents a small divot in the DEM, aka `sink`. The SAGA and Grass packages have tools for fixing sinks 
-in order to perform watershed-based functions. 
+in order to perform watershed-based functions. For some background, read https://gisgeography.com/flow-direction/, which 
+explains how surface hydrology is calculated using a DEM and the slope of each cell.
 
 ##### Fix sinks
 When the algorithms run to create a drainage network, the nework will stop at sinks. We can either fill the sinks or provide
