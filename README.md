@@ -32,7 +32,7 @@ Some resources related to the tools you will be using:
 
 1. Visit the USGS National Map https://viewer.nationalmap.gov/basic/ and zoom in to Tucson, AZ. 
 
-2. Select `Elevation Products 3DEP` and select 1/3 arcsecond DEM. Zoom to Tucson, AZ. Toggle `Map Indices` on to see the green 
+2. Select `Elevation Products 3DEP` and select 1/3 arcsecond DEM. Toggle `Map Indices` on to see the green 
 borders of the USGS DEM quadrangles. 
 
 3. Click on the 
@@ -73,21 +73,22 @@ in order to perform watershed-based functions.
 
 ##### Fix sinks
 When the algorithms run to create a drainage network, the nework will stop at sinks. We can either fill the sinks or provide
-sink drainage routes for algorithms that can trace water flow across the landscape based on gravity.
+sink drainage routes for algorithms that can trace water flow across the landscape based on gravity. Use the `Saga Toolbox` in the  `Processing Toolbox` for the next few processing steps. The next steps are abbreviated but you can learn more about what they do in the *Resources* section above.
 
+From the Processing Toolbox:
 1. `Saga` -> `Terrain Analysis - Hydrology` -> `Sink Drainage Route Detection` and save it as `dem_sink_routes`
 
-This will take some time to run. When it finishes, you will have a new grid that is mostly a single color with specs of white and grey.
+This will take some time to run (10 minutes or more). When it finishes, you will have a new grid that is mostly a single color with specs of white and grey. The specs of white and grey are the locations of flow artifacts.
 
 2. `Saga` -> `Terrain Analysis - Hydrology` -> `Sink Removal`
-Select the option to `Deepen Drainage Routes` and save it as `clipped_filled_dem.sdat` -- This will result in a DEM which has no sinks. Thus, when we try to derive a watershed, we can trace uphill all the way to the watershed boundaries. 
+Select the option to `Deepen Drainage Routes` and save it as `clipped_filled_dem.sdat` -- This will result in a DEM which has no sinks. Specifically, it will lower the elevation of cells that block a drainage from connecting with its down-slope continuation. 
 
 #### Derive channel network
 3. `Saga` -> `Terrain Analysis - Channels` -> `Channel network and drainage basins`
-If you have 
 
 #### Intersect River Road with channel network
-Find the points where the two line layers intersect using a simple intersection.
+Find the points where the two line layers intersect using a simple intersection. These will represent the locations where 
+flood waters cross River Road.
 4. `Vector` -> `Analysis Tools` -> `Line Intersections`
 
 #### Derive Catchment Areas
@@ -113,13 +114,19 @@ by selecting the watershed and Exporting the Selected Features  to a new layer
 ### Deliverable
 This assignment requires you to commit to a new branch in this repo named `watershed` 
 
-1) your watershed shapefile. This includes the following files (assuming it was named `watershed.shp`:
+1. Make a directory named `data` and put the data layers of the following in your directory. Please include the 
+`.shp`, `shx`, `.sbx`, and `.prj` files of each shapefile. You may zip them.
+- watershed
+- channels
+- river/channel intersection
+
+2. A screenshot of your watershed attribute table
+
+3. A screenshot of your map showing the watershed delineation
+
+### Important! Save these results!
+You will want to save the following for Part II:
 - watershed.shp
-- watershed.shx
-- watershed.dbf
-- watershed.prj
-You can include the .xpg and .qpj files but they are not necessary.
-
-2) A screenshot of your watershed attribute table
-
-3) A screenshot of your map showing the watershed delineation
+- channels.shp
+- river_channel_intersections.shp
+- clipped, filled DEM
