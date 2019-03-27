@@ -68,7 +68,7 @@ also load them through the QGIS drop-down: `Layer`-> `Add Layer` -> `Raster` and
 #### Clip Elevation Data
 1. Use the `data/study_area.geojson` polygon to clip the DEM. This file is in this repo. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
 
-![dem_clip.png](screenshots/dem_clip.png)
+![dem_clip.png](screenshots/clipped_dem_mask.png)
 
 #### "Massage" DEM for hydrology
 The source DEMs have little divots in it; partly because that's how the landscape is and partly because of artifacts. For
