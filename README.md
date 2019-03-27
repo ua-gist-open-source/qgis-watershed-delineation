@@ -38,15 +38,15 @@ borders of the USGS DEM quadrangles.
 3. Click on the 
 ![draw_rectangle_box.png](draw_rectangle_box.png) `Draw Rectangle` box icon. Draw a rectangle around the Tucson foothills region, making sure to include Mount Lemmon in the upper right and extending far enough on the left to cross I-10. The footprint should look like this: 
 
-![tucson_foothills_polygon.png](tucson_foothills_polygon.png)
+![tucson_foothills_polygon.png](screenshots/tucson_foothills_polygon.png)
 
 4. Click on the Find Products button which should open the `Products` tab. If you have selected the right area, you should have two DEMs in your list, `n33w111` and `n33w112`:
 
-![usgs_dem_list.png](usgs_dem_list.png)
+![usgs_dem_list.png](screenshots/usgs_dem_list.png)
 
 If you click on the `Thumbnail` link on each entry under the `Actions` column your map view should show that 6 quads are selected:
 
-![usgs_map_dem_quads.png](usgs_map_dem_quads.png)
+![usgs_map_dem_quads.png](screenshots/usgs_map_dem_quads.png)
 
 5. Download the data, which will be a .zip file containing an ArcGrid and subdirectory containing a polygon shapefile of the extent. Extract the zip files and load the grids in QGIS.
 
