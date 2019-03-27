@@ -29,32 +29,38 @@ Some resources related to the tools you will be using:
 
 ### Instructions
 #### Acquire Elevation Data
-Download the 
-Select `Elevation Products 3DEP` and select 1/3 arcsecond DEM. Zoom to Tucson, AZ. Toggle `Map Indices` on to see the green 
-borders of the USGS DEM quadrangles. Next, click on the 
-![draw_rectangle_box.png](screenshots/draw_rectangle_box.png) `Draw Rectangle` box icon. Draw a rectangle around the Tucson foothills region, making sure to include Mount Lemmon in the upper right and extending far enough on the left to cross I-10. The footprint should look like this: 
 
-![tucson_foothills_polygon.png](screenshots/tucson_foothills_polygon.png)
+1. Visit the USGS National Map https://viewer.nationalmap.gov/basic/ and zoom in to Tucson, AZ. 
 
-Nextm, click on the Find Products button which should open the `Products` tab. If you have selected the right area, you should have two DEMs in your list, `n33w111` and `n33w112`:
+2. Select `Elevation Products 3DEP` and select 1/3 arcsecond DEM. Zoom to Tucson, AZ. Toggle `Map Indices` on to see the green 
+borders of the USGS DEM quadrangles. 
 
-![usgs_dem_list.png](screenshots/usgs_dem_list.png)
+3. Click on the 
+![draw_rectangle_box.png](draw_rectangle_box.png) `Draw Rectangle` box icon. Draw a rectangle around the Tucson foothills region, making sure to include Mount Lemmon in the upper right and extending far enough on the left to cross I-10. The footprint should look like this: 
+
+![tucson_foothills_polygon.png](tucson_foothills_polygon.png)
+
+4. Click on the Find Products button which should open the `Products` tab. If you have selected the right area, you should have two DEMs in your list, `n33w111` and `n33w112`:
+
+![usgs_dem_list.png](usgs_dem_list.png)
 
 If you click on the `Thumbnail` link on each entry under the `Actions` column your map view should show that 6 quads are selected:
 
-![usgs_map_dem_quads.png](screenshots/usgs_map_dem_quads.png)
+![usgs_map_dem_quads.png](usgs_map_dem_quads.png)
 
-Next, download the data, which will be a .zip file containing an ArcGrid and subdirectory containing a polygon shapefile of the extent. Extract the zip files and load the grids in QGIS.
+5. Download the data, which will be a .zip file containing an ArcGrid and subdirectory containing a polygon shapefile of the extent. Extract the zip files and load the grids in QGIS.
 
 #### Mosaic Elevation Data 
-Add both DEM grids to the QGIS project. The grids will have an obvious seam where they touch/overlap because the histogram stretch applied to the layers is based on the stats of each layer and each DEM has different stats. You'll see it disappear when you mosaic them.
-To mosaic, click the `Raster` drop down, then `Miscellaneous` -> `Merge`.
-Click the `...` at the right side of the `Input layers` selection and check the two grids you just downloaded. 
+1. Add both DEM grids to the QGIS project. The grids will have an obvious seam where they touch/overlap because the histogram stretch applied to the layers is based on the stats of each layer and each DEM has different stats. You'll see it disappear when you mosaic them.
+
+2. To mosaic, click the `Raster` drop down, then `Miscellaneous` -> `Merge`.
+
+3. Click the `...` at the right side of the `Input layers` selection and check the two grids you just downloaded. Run the tool and the mosaic will be added to your map.
 
 #### Clip Elevation Data
-Use the `study_area.shp` polygon to clip the DEM. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
+1. Use the `study_area.shp` polygon to clip the DEM. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
 
-![dem_clip.png](screenshots/dem_clip.png)
+![dem_clip.png](dem_clip.png)
 
 #### "Massage" DEM for hydrology
 The source DEMs have little divots in it; partly because that's how the landscape is and partly because of artifacts. For
