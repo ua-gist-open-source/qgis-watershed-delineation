@@ -54,7 +54,7 @@ Click the `...` at the right side of the `Input layers` selection and check the 
 #### Clip Elevation Data
 Use the `study_area.shp` polygon to clip the DEM. Use `Raster` -> `Extraction` -> `Extract by Mask Layer` or find the `Clip by mask layer` in the `Processing Toolbox. Your QGIS desktop should look like this:
 
-![qgis_screenshot_clipped_dem.png](screenshots/qgis_screenshot_clipped_dem.png)
+![dem_clip.png](screenshots/dem_clip.png)
 
 #### "Massage" DEM for hydrology
 The source DEMs have little divots in it; partly because that's how the landscape is and partly because of artifacts. For
