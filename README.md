@@ -117,19 +117,15 @@ by selecting the watershed and Exporting the Selected Features  to a new layer
 ### Deliverable
 This assignment requires you to commit to a new branch in this repo named `watershed` 
 
-1. Make a directory named `data` and put the data layers of the following in your directory. Please include the 
-`.shp`, `shx`, `.sbx`, and `.prj` files of each shapefile. You may zip them.
+1. Export these three layers as GeoJSON and add them to this repository under the `data` directory.
 - watershed
 - channels
 - river/channel intersection
 
-2. A screenshot of your watershed attribute table
+2. A screenshot of your watershed attribute table named `ws_table.png`, saved to the `screenshots` directory
 
-3. A screenshot of your map showing the watershed delineation
+3. A screenshot of your map showing the watershed delineation named `ws_outline.png`, saved to the `screenshots` directory
 
-### Important! Save these results!
+### Important! Save your DEM!
 You will want to save the following for Part II:
-- watershed.shp
-- channels.shp
-- river_channel_intersections.shp
-- clipped, filled DEM
+- clipped, filled, "fixed" DEM
